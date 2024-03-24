@@ -1,5 +1,5 @@
 FROM ubuntu:jammy
-LABEL org.opencontainers.image.authors="ruizhi.zhong@zoom.us"
+LABEL org.opencontainers.image.authors="ruizhi.zhong@outlook.com"
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
       openjdk-8-jdk \
@@ -10,9 +10,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
       libsnappy-dev \
     && rm -rf /var/lib/apt/lists/*
       
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64/
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 
-ENV HBASE_VERSION 2.4.17
+ENV HBASE_VERSION 2.5.8
 ENV HBASE_URL https://dlcdn.apache.org/hbase/$HBASE_VERSION/hbase-$HBASE_VERSION-bin.tar.gz
 RUN set -x \
     && curl -fSL -k "$HBASE_URL" -o /tmp/hbase.tar.gz \
