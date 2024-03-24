@@ -48,7 +48,7 @@ services:
       - ./hadoop.env
 
   hbase:
-    image: zhongruizhi/hbase-standalone:2.4.17
+    image: zhongruizhi/hbase-standalone:2.5.8-java8-amd64
     container_name: hbase
     volumes:
       - hbase_data:/hbase-data

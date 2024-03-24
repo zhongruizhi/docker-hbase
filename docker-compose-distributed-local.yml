@@ -67,7 +67,7 @@ services:
       - 2181:2181
 
   hbase-master:
-    image: zhongruizhi/hbase-master:2.4.17
+    image: zhongruizhi/hbase-master:2.5.8-java8-amd64
     container_name: hbase-master
     hostname: hbase-master
     env_file:
@@ -78,7 +78,7 @@ services:
       - 16010:16010
 
   hbase-region:
-    image: zhongruizhi/hbase-regionserver:2.4.17
+    image: zhongruizhi/hbase-regionserver:2.5.8-java8-amd64
     container_name: hbase-regionserver
     hostname: hbase-regionserver
     env_file:
