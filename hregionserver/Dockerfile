@@ -1,4 +1,4 @@
-FROM ruizhizhong058/hbase-base:2.4.17
+FROM zhongruizhi/hbase-base:2.5.8-java8-aarch64
 
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
